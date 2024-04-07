@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "temp-pedro",
+  "private_key_id": "28508b49f066116442c17859274994a11889b4ab",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHnGVUASEgNsZM\n5cBq3qaTeuwfV/1XzZJBCMQ2oNg/CoZghfFVEUu7h7WcFsIviMuVcO00wFapGJyz\nwRL0DX2NY6Izj+ASzGF0cHfOj2mcBNuUglHOOmMFYdbyvXDMQKBk0TsXzvXnsSmh\nfD+Ni00cLyhx3eoN9hJUfJ91fCR7gwtZgIEmlznqSBj3ttjNLHlReRNiy1qiAiS7\natGlBJtEySxGToqjaXjkaBJ+HnONGblstAAO0XL03+kHEmiA85y/w4IslxX+ostX\nas3FBuF8/hwS+nVaNjXEJTdaKlfvZ3i5fcr64e5g1Rp9PAJpJlu5XWE2uODSntLQ\n3E3XTegZAgMBAAECggEAATxkcKoLyue2lUX4rT7xARffhmW2Z9qLxNUXus7cJFmP\ncaipwsETxaF57CpgzBYahXrMLvfgH7Wu25b0OU+BZ/K0pQ/AUvnqwlVcYW4kjiT3\nxxTz7ZqDY1Sy3OXlmcjR/Ia0c9m63O9+/ZpO5RghCopMpyRHRkUTxU965GJw1ZvR\nhDttusuDQxvIkjKPpSnR2lA9bksgVhKMXQ6qdywpX1j0CSqVktElgZck1tdNpZZY\nZZWKw6jrYEfAON/bQEDj7sxFyFaSQWhmJ333iBhFdJ46aCE2/8E/dbdzKJ0hhuKB\nzDihR+X1OQf2gCBsflzYHF4tqPRF2f9CS+gSb+BtUQKBgQD4D6C5KOXKNEVIu80J\nMRB6pvk5b0v2a1Pl5l9liC3zioq/NCe1aiE/CMwffP5N7qrbPDkHvU2FCuLRH2t5\nLHg4o6UFRSTs3JatCNM3iCGCGLRb+vv6gqml38JsN3b5pTXX58ZeUjpmp0/kQfKs\nKSVxbmhYy/1x3gTupAcU9n9KlwKBgQDN/9CGGPLfVihO2BRj1PJGpLFcsu+SkET2\ndXtR/2wKvGv1aEMbR4xwNcQx9mFzkUJvemcfYEueFgAkIM2M154K3FcKrb3pxu1F\nWbtAidktwvsDlUnlD3jefrrYjeix1l6fGRZfJaE3DFRwN3qTTOYehcw3yj+xGTFm\nPmfKty8ozwKBgQDlS3TSksZN8aE1iTsOywajiWKIP6Ok5TLJKPh3XrizDRYRhcFK\nxQ50OMqONLjRCtNuEa3ZxJc6aoScr4FlocCDAmlQhMiMFZ9F1QmApFns6q8U8twm\nhM8SH9KUu3RDcP5jU8Aegb2wE+oaYQdTMjmFL3xO0Ei3D3XZrU9KhkvFgwKBgQCn\nWZAUsIX2S+8ZBk+iPqfIHhl8Xl1kKtHristxdNhX7HSj/Fyv97MuoW9Oy4KluTdI\nix7ljXxA5EyfDQsPxUa+Ofx4T2c+WP3+3gPSTWpi08jKQ2ixrp0Z28h9DuQgPS/H\nfkD/cPmEV/7s3xU0Pz+fQkECfcq6W+YW0tHNDH5CXwKBgHBoCHMEAQ17ASrSJVTe\nyRpEXMlcaI108yreQWGVKXntYl2MWbE1Pe0lA71RfM0eRRl69y1mVsxG5W34Qm82\nIpcbI6kkpbvkVOfQ8gWU+zW8i3P/KaZLnrf6juzrSpKxll2KZB/TNvAXLNNcGuti\nMR0wTDfkH2DuRmgrS4Z7oOKN\n-----END PRIVATE KEY-----\n",
+  "client_email": "deel-dbt-user@temp-pedro.iam.gserviceaccount.com",
+  "client_id": "103171866622104383171",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/deel-dbt-user%40temp-pedro.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

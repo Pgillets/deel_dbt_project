@@ -1,0 +1,28 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'docker'
+  args: ['build', 
+          '--tag=us-central1-docker.pkg.dev/$PROJECT_ID/deel/deel-dbt-image:$BUILD_ID',
+          '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/deel/deel-dbt-image:$BUILD_ID']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  # Use create instead of update command if the Cloud Run job doesn't exist yet
+  args: [
+    'run', 'jobs', 'update',
+    'deel-dbt-cloud-run-job', '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/deel/deel-dbt-image:$BUILD_ID',
+    '--region', 'us-central1',
+    '--max-retries', '1']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+    # Use create instead of update command if the scheduler job doesn't exist yet
+  args: [
+    'scheduler', 'jobs', 'update', 'http',
+    'deel-dbt-cloud-run-schedule', 
+    '--schedule', '10 6-21/3 * * *',
+    '--location', 'us-central1',
+    '--uri', 'https://us-central1-run.googleapis.com/apis/run.googleapis.com/v1/namespaces/$PROJECT_ID/jobs/deel-dbt-cloud-run-job:run',   
+    '--http-method', 'POST',
+    '--oauth-service-account-email', '$PROJECT_NUMBER-compute@developer.gserviceaccount.com'
+    ]

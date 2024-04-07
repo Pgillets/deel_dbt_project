@@ -1,0 +1,14 @@
+deel_dbt_project:
+  outputs:
+    dev:
+      dataset: deel
+      job_execution_timeout_seconds: 3600
+      job_retries: 1
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      location: US
+      method: service-account
+      priority: interactive
+      project: temp-pedro
+      threads: 2
+      type: bigquery
+  target: dev
