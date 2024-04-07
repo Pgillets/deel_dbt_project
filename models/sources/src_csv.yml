@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+    - name: deel
+      database: temp-pedro
+      schema: deel
+      description: csv data provided by Deel.
+      tables:
+        - name: src_csv_organizations
+          description: "Organizations info"
+          external:
+            location: "gs://deel_data_source/deel_platform_ae_dataset/organizations.csv"
+            options:
+            format: csv
+            allow_jagged_rows: true
+            allow_quoted_newlines: true
+        - name: src_csv_invoices
+          description: "Invoice details"
+          external:
+            location: "gs://deel_data_source/deel_platform_ae_dataset/invoices.csv"
+            options:
+            format: csv
+            allow_jagged_rows: true
+            allow_quoted_newlines: true

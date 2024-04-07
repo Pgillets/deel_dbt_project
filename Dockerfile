@@ -1,4 +1,4 @@
-FROM ghcr.io/dbt-labs/dbt-bigquery:1.4.latest
+FROM ghcr.io/dbt-labs/dbt-bigquery:1.7.latest
 
 # # define in docker build
 # ARG BQ_PROJECT_ID
