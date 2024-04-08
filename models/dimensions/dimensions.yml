@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_organizations
+    columns:
+      - name: ORGANIZATION_ID
+        tests:
+          - unique
+          - not_null
+      - name: TOTAL_INVOICES
+      - name: AVG_SPEND_PER_INVOICE
+      - name: FIRST_PAYMENT_DATE
+      - name: LAST_PAYMENT_DATE
+      - name: LEGAL_ENTITY_COUNTRY_CODE
+      - name: COUNT_TOTAL_CONTRACTS_ACTIVE
+      - name: CREATED_DATE
+      - name: CURRENCIES_USED_FOR_PAYMENT
+      - name: PAYMENT_METHODS_USED
+      - name: OPEN_INVOICES
+      - name: PENDING_INVOICES
+      - name: PROCESSING_INVOICES
+      - name: PAID_INVOICES
+      - name: SKIPPED_INVOICES
+      - name: CANCELLED_INVOICES
+      - name: FAILED_INVOICES
+      - name: CREDITED_INVOICES
+      - name: REFUNDED_INVOICES

@@ -1,0 +1,20 @@
+WITH time_window_filter as (
+    SELECT
+        DATE,
+        ORGANIZATION_ID,
+        CUSTOMER_BALANCE,
+        LAG(CUSTOMER_BALANCE, 1) OVER (PARTITION BY ORGANIZATION_ID ORDER BY DATE) AS PREVIOUS_DAY_BALANCE
+    FROM {{ ref( 'fact_organization_balance_hist'  ) }}
+    WHERE DATE >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)
+),
+
+balance_change_calc as (
+    SELECT
+        *,
+        (IFNULL(SAFE_DIVIDE((CUSTOMER_BALANCE - PREVIOUS_DAY_BALANCE), PREVIOUS_DAY_BALANCE),0) * 100) AS BALANCE_CHANGE_PERCENT
+    FROM time_window_filter
+    WHERE DATE = CURRENT_DATE
+)
+
+SELECT * FROM balance_change_calc
+WHERE ABS(BALANCE_CHANGE_PERCENT) > 50
