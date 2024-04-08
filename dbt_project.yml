@@ -26,4 +26,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   elementary:
-    +schema: "governance_elementary"
+    +schema: "elementary"
