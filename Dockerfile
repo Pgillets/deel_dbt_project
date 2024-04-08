@@ -20,4 +20,4 @@ USER root
 RUN dbt debug --target=$TARGET
 RUN dbt debug --profile=elementary --target=$TARGET
 
-ENTRYPOINT dbt deps && dbt build --target=$TARGET && edr monitor --profile-target=elementary --slack-token '$SLACK_TOKEN' --slack-channel-name temp-alerts
+ENTRYPOINT dbt deps && dbt build --target=$TARGET && edr monitor --profile-target=$TARGET --slack-token '$SLACK_TOKEN' --slack-channel-name temp-alerts
