@@ -58,4 +58,3 @@ LEFT JOIN paid_invoices_overview as i
 ON o.ORGANIZATION_ID = i.ORGANIZATION_ID
 LEFT JOIN open_and_pending_invoices_overview as opi
 ON o.ORGANIZATION_ID = opi.ORGANIZATION_ID
-ORDER BY CREATED_DATE

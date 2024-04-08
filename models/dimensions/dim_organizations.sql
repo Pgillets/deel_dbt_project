@@ -41,4 +41,4 @@ SELECT
   i.CREDITED_INVOICES,
   i.REFUNDED_INVOICES
 FROM {{ ref( 'stg_organizations' ) }} as o
-LEFT JOIN invoice_data as i ON o.ORGANIZATION_ID = i.ORGANIZATION_ID;
+LEFT JOIN invoice_data as i ON o.ORGANIZATION_ID = i.ORGANIZATION_ID
